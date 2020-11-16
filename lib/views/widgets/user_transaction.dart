@@ -8,7 +8,7 @@ class UserTransaction extends StatelessWidget {
   final List<Transaction> transactions;
   final Function onDeleteTransaction;
 
-  UserTransaction(this.transactions, this.onDeleteTransaction);
+  const UserTransaction(this.transactions, this.onDeleteTransaction);
 
   @override
   Widget build(BuildContext context) {

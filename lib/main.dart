@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
   }
 
-  void _deleteTransactionHandler(id) {
+  void _deleteTransactionHandler(String id) {
     setState(() {
       _transactions = [..._transactions.where((tx) => tx.id != id)];
     });
@@ -98,10 +98,10 @@ class _MyHomePageState extends State<MyHomePage> {
     final mediaQuery = MediaQuery.of(context);
     final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final appBar1 = AppBar(
-      title: Text('Expense Tracker'),
+      title: const Text('Expense Tracker'),
       actions: <Widget>[
         IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.add,
             color: Colors.white,
             size: 30,
@@ -116,11 +116,11 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Platform.isIOS
           ? null
           : Container(
-              margin: EdgeInsets.only(bottom: 10),
+              margin: const EdgeInsets.only(bottom: 10),
               child: FloatingActionButton(
                 backgroundColor: Theme.of(context).accentColor,
                 onPressed: () => _startAddNewTransaction(context),
-                child: Icon(
+                child: const Icon(
                   Icons.add,
                   color: Colors.white,
                 ),
