@@ -8,7 +8,8 @@ class TransactionCard extends StatelessWidget {
   final Function onRemoveTransaction;
 
   const TransactionCard(
-      {this.title, this.date, this.amount, this.onRemoveTransaction});
+      {Key key, this.title, this.date, this.amount, this.onRemoveTransaction})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

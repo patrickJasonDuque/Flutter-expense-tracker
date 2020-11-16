@@ -95,9 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
-    final isLandscape = mediaQuery.orientation == Orientation.landscape;
-    final appBar1 = AppBar(
+    final MediaQueryData mediaQuery = MediaQuery.of(context);
+    final bool isLandscape = mediaQuery.orientation == Orientation.landscape;
+    final AppBar appBar1 = AppBar(
       title: const Text('Expense Tracker'),
       actions: <Widget>[
         IconButton(

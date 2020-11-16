@@ -12,6 +12,7 @@ class TransactionList extends StatelessWidget {
     return ListView.builder(
       itemCount: transactions.length,
       itemBuilder: (ctx, i) => TransactionCard(
+        key: ValueKey(transactions[i].id),
         amount: transactions[i].amount,
         title: transactions[i].title,
         date: transactions[i].date,
