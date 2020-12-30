@@ -22,6 +22,7 @@ class TransactionList extends StatelessWidget {
     // return ListView(
     //   children: [
     //     ...transactions.map((tx) => TransactionCard(
+    //           key: ValueKey(tx.id),
     //           amount: tx.amount,
     //           title: tx.title,
     //           date: tx.date,
